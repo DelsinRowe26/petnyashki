@@ -37,12 +37,13 @@ int main() {
                 e = j;
                 h++;
             }
-            if (i == b && j == f && g >= 1 && my_num_two > 0 && my_num_two <= m * n && (e - j >= 1 || d - i <=1) && (e - j <= 1 || d - i >= 1)) {
+            if (i == b && j == f && g >= 1 && my_num_two > 0 && my_num_two <= m * n && ((e - j >= 1 && e - j >= 0) || (d - i <= 1)) && (((e - j <= 1 && e - j >=0) || (d - i >= 1 && d - i >= 0)))) {
                 a[i][j] = my_num_two;
+                if (i == d && j == e && h >= 1 && my_num > 0 && my_num <= m * n && ((j - f <= 1 && j - f >= 0) || (i - b >= 1/* && i - b >= 0 */)) && ((j - f >= 1 && j - f >= 0) || (i - b <= 1 /*&& i - b >= 0*/))) {
+                    a[b][f] = my_num;
+                }
             }
-            if (i == d && j == e && h >=1 && my_num > 0 && my_num <= m * n && (j - f <= 1 || i - b >= 1) && (j - f >= 1 || i - b <= 1)) {
-                a[i][j] = my_num;
-            }
+            
             cout << a[i][j];
         }
         cout << endl;
