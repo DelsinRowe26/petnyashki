@@ -44,14 +44,14 @@ int main() {
                 e = j;
                 h++;
             }
-            
-            /*if (i == b && j == f && g >= 1 && my_num_two > 0 && my_num_two <= m * n && ((e - j >= 1 || e - j >= 0) || (d - i <= 1)) && (((e - j <= 1 || e - j >=0) || (d - i >= 1 || d - i >= 0)))) {
-                a[i][j] = my_num_two;
-                
-            }
-            if (i == d && j == e && h >= 1 && my_num > 0 && my_num <= m * n && ((j - f <= 1 || j - f >= 0) || (i - b >= 1/* && i - b >= 0 )) && ((j - f >= 1 || j - f >= 0) || (i - b <= 1 /*&& i - b >= 0))) {
-                a[b][f] = my_num;
-            }*/
+        }
+    }
+    cout << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (a[i][j] % 10 == a[i][j]) cout << "   ";
+            else if (a[i][j] % 100 == a[i][j]) cout << "  ";
+            else if (a[i][j] % 1000 == a[i][j]) cout << " ";
             if (i == b && j == f && g >= 1 && my_num_two > 0 && my_num_two <= m * n && (d - i == 0 || d - i == 1 || d - i == -1) && (e - j == 0 || e - j == 1 || e - j == -1))//индексы первого числа
             {
                 a[i][j] = my_num_two;
@@ -61,10 +61,6 @@ int main() {
             {
                 a[i][j] = my_num;
             }
-            /*if (i == d && j == e && h >= 1 && (d - b == 1 || d - b == -1 || d - b == 0) && (e - f == 1 || e - f == -1 || e - f == 0))//индексы второго числа
-            {
-                a[i][j] = my_num;
-            }*/
             cout << a[i][j];
         }
         cout << endl;
